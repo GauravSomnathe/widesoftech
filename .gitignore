@@ -1,3 +1,4 @@
-/nodemodule
-/dotenv
+node_modules/
 .env
+dist/
+build/
