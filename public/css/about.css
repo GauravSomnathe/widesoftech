@@ -1,0 +1,353 @@
+
+        /* Base Styling for the body - ensure consistent background and fonts */
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa; /* A soft, professional background */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
+        }
+
+        /* --- Main About Section Container --- */
+        .professional-about-section {
+            padding: 80px 0; /* Generous vertical padding */
+            background-color: #ffffff; /* White background for the main content block */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* A more subtle, professional shadow */
+            margin-bottom: 60px; /* Space before footer */
+            opacity: 0; /* Initial opacity for fade-in */
+            transform: translateY(20px); /* Slightly move down for fade-in */
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Animation properties */
+        }
+
+        /* Class added by JavaScript when content is loaded */
+        .professional-about-section.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .professional-about-content {
+            max-width: 1100px; /* Wider content area for a professional feel */
+            margin: 0 auto;
+            padding: 0 30px; /* Ample horizontal padding */
+        }
+
+        /* --- Section Headings --- */
+        .professional-about-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 3.2rem; /* Larger, impactful heading */
+            color: #2c3e50; /* Dark primary color for headings */
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+            opacity: 0; /* Initial opacity for fade-in */
+            transform: translateY(10px); /* Slightly move down for fade-in */
+            transition: opacity 0.5s ease-out 0.2s, transform 0.5s ease-out 0.2s; /* Animation with delay */
+        }
+
+        /* Class added by JavaScript when content is loaded */
+        .professional-about-content h2.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .professional-about-content h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 100px; /* Longer underline */
+            height: 5px; /* Thicker underline */
+            background-color: #FFD700; /* Your brand accent color */
+            border-radius: 3px;
+        }
+
+        .professional-about-content h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 2.2rem; /* Subheading size */
+            color: #34495e; /* Slightly lighter heading color */
+            margin-top: 50px; /* More space above subheadings */
+            margin-bottom: 25px;
+            text-align: center;
+            opacity: 0; /* Initial opacity for fade-in */
+            transform: translateY(10px); /* Slightly move down for fade-in */
+            transition: opacity 0.5s ease-out 0.3s, transform 0.5s ease-out 0.3s; /* Animation with delay */
+        }
+
+        /* Class added by JavaScript when content is loaded */
+        .professional-about-content h3.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Paragraphs --- */
+        .professional-about-content p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.15rem; /* Slightly larger paragraph text for readability */
+            line-height: 1.8; /* Improved readability */
+            color: #555;
+            margin-bottom: 25px;
+            text-align: justify; /* Justify text for a formal, clean block */
+            max-width: 900px; /* Constrain paragraph width for better readability */
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0; /* Initial opacity for fade-in */
+            transform: translateY(10px); /* Slightly move down for fade-in */
+            transition: opacity 0.5s ease-out 0.4s, transform 0.5s ease-out 0.4s; /* Animation with delay */
+        }
+
+        /* Class added by JavaScript when content is loaded */
+        .professional-about-content p.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Vision & Mission Section (Example of flexible layout) --- */
+        .vision-mission-grid {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            gap: 30px; /* Space between columns */
+            margin-top: 40px;
+            justify-content: center; /* Center columns when they wrap */
+        }
+
+        .vision-mission-item {
+            flex: 1; /* Allows items to grow and shrink */
+            min-width: 300px; /* Minimum width before wrapping */
+            background-color: #fefefe; /* Very light background for distinction */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Soft shadow */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s; /* Animation with delay */
+            text-align: left; /* Align text left within these blocks */
+            opacity: 0; /* Initial opacity for fade-in */
+            transform: translateY(10px); /* Slightly move down for fade-in */
+        }
+
+        /* Class added by JavaScript when content is loaded */
+        .vision-mission-item.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .vision-mission-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .vision-mission-item h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #34495e;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .vision-mission-item h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #FFD700;
+            border-radius: 2px;
+        }
+
+        .vision-mission-item p {
+            font-size: 1.05rem;
+            color: #666;
+            margin-bottom: 0; /* Remove bottom margin from last paragraph in item */
+        }
+
+        /* --- Why Choose Us List --- */
+        .why-choose-list {
+            list-style: none;
+            padding: 0;
+            margin: 50px auto;
+            max-width: 1000px; /* Wider list area */
+            display: grid; /* Use CSS Grid for a robust responsive layout */
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 3 columns on large screens, adapts down */
+            gap: 25px; /* Space between grid items */
+            text-align: left;
+            opacity: 0; /* Initial opacity for fade-in */
+            transform: translateY(20px); /* Slightly move down for fade-in */
+            transition: opacity 0.5s ease-out 0.6s, transform 0.5s ease-out 0.6s; /* Animation with delay */
+        }
+
+        /* Class added by JavaScript when content is loaded */
+        .why-choose-list.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .why-choose-list li {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #444;
+            position: relative;
+            padding: 25px 25px 25px 65px; /* More padding for icon and content */
+            background-color: #fcfcfc; /* Slightly off-white for list items */
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Subtle shadow */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Hover animation */
+            border-left: 5px solid #FFD700; /* Left border accent */
+        }
+
+        .why-choose-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+        }
+
+        .why-choose-list li::before {
+            content: "\f00c"; /* Font Awesome checkmark icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 20px; /* Icon position */
+            top: 25px; /* Align with padding */
+            color: #FFD700; /* Yellow checkmark */
+            font-size: 1.5rem; /* Larger icon */
+        }
+        
+        /* --- Call to Action Buttons --- */
+        .cta-buttons-professional {
+            text-align: center;
+            margin-top: 60px;
+            padding-bottom: 40px; 
+            display: flex;
+            justify-content: center;
+            gap: 25px; /* Space between buttons */
+            flex-wrap: wrap; /* Allow buttons to wrap */
+            opacity: 0; /* Initial opacity for fade-in */
+            transform: translateY(20px); /* Slightly move down for fade-in */
+            transition: opacity 0.5s ease-out 0.7s, transform 0.5s ease-out 0.7s; /* Animation with delay */
+        }
+
+        /* Class added by JavaScript when content is loaded */
+        .cta-buttons-professional.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .cta-buttons-professional button {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            background-color: #FFD700; /* Yellow primary button */
+            color: #333;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 8px; /* Slightly less rounded than pill-shaped for professionalism */
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+            min-width: 220px; /* Ensure good button size */
+        }
+
+        .cta-buttons-professional button:nth-child(2) { 
+             background-color: #2c3e50; /* Dark primary color for secondary action */
+             color: #fff;
+        }
+        .cta-buttons-professional button:nth-child(2):hover {
+            background-color: #34495e;
+        }
+
+        .cta-buttons-professional button:hover {
+            background-color: #e6c200; /* Darker yellow on hover */
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* --- Responsive Design Adjustments --- */
+        @media (max-width: 992px) {
+            .professional-about-content h2 {
+                font-size: 2.8rem;
+            }
+            .professional-about-content h3 {
+                font-size: 1.9rem;
+            }
+            .professional-about-content p {
+                font-size: 1.1rem;
+            }
+            .why-choose-list {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust columns for medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .professional-about-section {
+                padding: 60px 0;
+            }
+            .professional-about-content {
+                padding: 0 20px;
+            }
+            .professional-about-content h2 {
+                font-size: 2.2rem;
+                padding-bottom: 10px;
+            }
+            .professional-about-content h2::after {
+                width: 80px;
+                height: 4px;
+            }
+            .professional-about-content h3 {
+                font-size: 1.7rem;
+                margin-top: 40px;
+            }
+            .professional-about-content p {
+                font-size: 1rem;
+                text-align: left; /* Align text left on small screens for better readability */
+            }
+            .vision-mission-grid {
+                flex-direction: column; /* Stack vision/mission items */
+                gap: 20px;
+            }
+            .why-choose-list {
+                grid-template-columns: 1fr; /* Single column on tablets/mobile */
+                gap: 15px;
+                margin: 40px auto;
+            }
+            .why-choose-list li {
+                padding: 20px 20px 20px 55px; /* Adjust padding for icons */
+                font-size: 1.05rem;
+            }
+            .why-choose-list li::before {
+                left: 15px;
+                top: 20px;
+                font-size: 1.4rem;
+            }
+            .cta-buttons-professional {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            .cta-buttons-professional button {
+                width: 90%;
+                font-size: 1.1rem;
+                padding: 15px 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .professional-about-content h2 {
+                font-size: 1.8rem;
+            }
+            .professional-about-content h3 {
+                font-size: 1.4rem;
+            }
+            .professional-about-content p {
+                font-size: 0.95rem;
+            }
+            .cta-buttons-professional button {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+        }
+  

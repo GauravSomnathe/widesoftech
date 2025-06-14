@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munchkin School - Professional Preschool Education</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">
+            <img src="./images/sdsdsdfdffdf.png" alt="Munchkin School Logo">
+        </a>
+        
+        <nav class="navbar" id="main-navbar">
+            <ul class="nav-list">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+                <li><a href="/program" class="nav-link">Program</a></li>
+                <li><a href="/admission" class="nav-link">Admission</a></li>
+                <li><a href="/franchise" class="nav-link">Franchise</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-right">
+            <div class="social-icons">
+                <a href="#" class="icon-link" aria-label="YouTube"><i class="bx bxl-youtube"></i></a>
+                <a href="#" class="icon-link" aria-label="Mail"><i class="bx bxs-envelope"></i></a>
+                <a href="#" class="icon-link" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+            </div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navbar">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div id="schoolCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#schoolCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#schoolCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#schoolCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/3rd.png" class="d-block w-100" alt="Students learning in classroom">
+                        <div class="carousel-caption d-md-flex align-items-center justify-content-center">
+                            <div class="hero-content">
+                                <img src="./images/sdsdsdfdffdf.png" alt="Munchkin Logo" class="hero-logo">
+                                <h1>Build A Foundation</h1>
+                                <p>For A Lifetime Of Learning</p>
+                                <div class="hero-buttons">
+                                    <button class="btn btn-primary" onclick="location.href='/admission'">ADMISSIONS OPEN</button>
+                                    <button class="btn btn-secondary" onclick="location.href='/franchise'">FRANCHISE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/1st.png" class="d-block w-100" alt="Children playing outdoors">
+                        <div class="carousel-caption d-md-flex align-items-center justify-content-center">
+                             <div class="hero-content">
+                                <img src="./images/sdsdsdfdffdf.png" alt="Munchkin Logo" class="hero-logo">
+                                <h1>Nurturing Young Minds</h1>
+                                <p>Where curiosity blossoms into knowledge.</p>
+                                <div class="hero-buttons">
+                                    <button class="btn btn-primary" onclick="location.href='/admission'">ADMISSIONS OPEN</button>
+                                    <button class="btn btn-secondary" onclick="location.href='/program'">OUR PROGRAMS</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/2nd.png" class="d-block w-100" alt="Creative activities for kids">
+                        <div class="carousel-caption d-md-flex align-items-center justify-content-center">
+                             <div class="hero-content">
+                                <img src="./images/sdsdsdfdffdf.png" alt="Munchkin Logo" class="hero-logo">
+                                <h1>Igniting A Passion</h1>
+                                <p>For discovery and personal growth.</p>
+                                <div class="hero-buttons">
+                                    <button class="btn btn-primary" onclick="location.href='/admission'">ENROLL NOW</button>
+                                    <button class="btn btn-secondary" onclick="location.href='/about'">LEARN MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#schoolCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#schoolCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="small-cards-wrapper">
+            <div class="container small-cards-section">
+                <div class="small-card">
+                    <i class="fas fa-book-open card-icon-sm"></i> Education and Knowledge
+                </div>
+                <div class="small-card">
+                    <i class="fas fa-child-reaching card-icon-sm"></i> Personal Development
+                </div>
+                <div class="small-card">
+                    <i class="fas fa-chalkboard-teacher card-icon-sm"></i> Experienced Faculty
+                </div>
+                <div class="small-card">
+                    <i class="fas fa-users card-icon-sm"></i> Holistic Socialization
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <div class="container">
+                <h2 class="section-heading">OUR CORE SKILLS</h2>
+                <div class="card-grid">
+                    <div class="skill-card">
+                        <div class="card-icon">
+                            <img src="./images/1ssst.png" alt="Language Skills icon">
+                        </div>
+                        <div class="card-content">
+                            <h3>Language Skills</h3>
+                            <p>Development is from words to phrases to sentences. Stories, puppet play, rhymes, concept learning, art, role play, music; every activity develops language and communication skills.</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card-icon">
+                            <img src="./images/4thhh.png" alt="Gross Motor Skills icon">
+                        </div>
+                        <div class="card-content">
+                            <h3>Gross Motor Skills</h3>
+                            <p>Ample opportunities to develop gross motor skills related to large muscles - running, jumping, hopping. Montessori activities, EPL activities, free play, physical activities...</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card-icon">
+                            <img src="./images/6thhhh.png" alt="Social Emotional Skills icon">
+                        </div>
+                        <div class="card-content">
+                            <h3>Social/Emotional Skills</h3>
+                            <p>One of the most important skills to develop in early childhood which lays the foundation for your habits/values in the future.</p>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card-icon">
+                            <img src="./images/5theee.png" alt="Cognitive Skills icon">
+                        </div>
+                        <div class="card-content">
+                            <h3>Cognitive Skills</h3>
+                            <p>Cognitive functions are developed by activities which involve listening, understanding and paying attention.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-school-section">
+            <div class="container">
+                <h2 class="section-heading">OUR JOURNEY</h2>
+                <div class="timeline">
+                    <div class="timeline-container left-container">
+                        <div class="timeline-icon-wrapper">
+                            <img src="./images/1ssst.png" alt="Munchkin School event 1">
+                        </div>
+                        <div class="text-box">
+                            <h3>Munchkin Foundation</h3>
+                            <small>2019-2022</small>
+                            <p>Munchkin Preschool is a leading chain of preschools located in India and Nepal backed by Zee Learn Ltd. With more than two decades of experience in the preschool industry, Kidzee has nurtured more than 1.5 million children throughout India.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container right-container">
+                        <div class="timeline-icon-wrapper">
+                            <img src="./images/2ndddd.png" alt="Munchkin School event 2">
+                        </div>
+                        <div class="text-box">
+                            <h3>Curriculum Development</h3>
+                            <small>2022-2023</small>
+                            <p>Our curriculum is meticulously designed, integrating modern pedagogical approaches with traditional values, focusing on holistic child development across cognitive, social, emotional, and physical domains.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container left-container">
+                        <div class="timeline-icon-wrapper">
+                            <img src="./images/3rddd.png" alt="Munchkin School event 3">
+                        </div>
+                        <div class="text-box">
+                            <h3>Community Engagement</h3>
+                            <small>2023-Present</small>
+                            <p>Active involvement with parents and the local community ensures a supportive and enriching environment for our students. Regular workshops and events foster a strong school-home partnership.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container right-container">
+                        <div class="timeline-icon-wrapper">
+                            <img src="./images/4thhh.png" alt="Munchkin School event 4">
+                        </div>
+                        <div class="text-box">
+                            <h3>Infrastructure Expansion</h3>
+                            <small>2024</small>
+                            <p>We are continuously investing in state-of-the-art facilities, including modern classrooms, child-friendly playgrounds, and innovative learning tools, to provide the best possible learning environment.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container left-container">
+                        <div class="timeline-icon-wrapper">
+                            <img src="./images/5theee.png" alt="Munchkin School event 5">
+                        </div>
+                        <div class="text-box">
+                            <h3>Teacher Training & Development</h3>
+                            <small>Ongoing</small>
+                            <p>Our dedicated educators receive continuous training in the latest teaching methodologies and child psychology, ensuring they are equipped to provide exceptional guidance and care.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container right-container">
+                        <div class="timeline-icon-wrapper">
+                            <img src="./images/6thhhh.png" alt="Munchkin School event 6">
+                        </div>
+                        <div class="text-box">
+                            <h3>Digital Learning Integration</h3>
+                            <small>2025</small>
+                            <p>Embracing technology, we've integrated digital learning tools and interactive platforms into our curriculum, preparing children for the modern world while keeping learning fun and engaging.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container left-container">
+                        <div class="timeline-icon-wrapper">
+                            <img src="./images/7thhhh.png" alt="Munchkin School event 7">
+                        </div>
+                        <div class="text-box">
+                            <h3>Health & Wellness Programs</h3>
+                            <small>Ongoing</small>
+                            <p>Prioritizing the well-being of our students, we've launched comprehensive health and wellness programs, including balanced nutrition plans and regular physical activity sessions.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container right-container">
+                        <div class="timeline-icon-wrapper">
+                            <img src="./images/8thh.png" alt="Munchkin School event 8">
+                        </div>
+                        <div class="text-box">
+                            <h3>Future Vision</h3>
+                            <small>2025 Onwards</small>
+                            <p>We envision expanding our reach, introducing more specialized programs, and continually evolving our approach to early childhood education to nurture future leaders and innovators.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-main">
+            <div class="footer-row">
+                <div class="footer-column about-us">
+                    <h3>About Us</h3>
+                    <p>Munchkins, a creative campus for children where the learning process blends with excitement and an enabling environment. Munchkins provides childcare of the highest quality.</p>
+                    <div class="social-icons-footer">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Pages</h3>
+                    <ul class="footer-links">
+                        <li><a href="/about">About School</a></li>
+                        <li><a href="/program">Program</a></li>
+                        <li><a href="/franchise">Franchise</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms-conditions">Terms & Conditions</a></li>
+                        <li><a href="/refund-policy">Refund Policy</a></li>
+                    </ul>
+                </div>
+            
+                <div class="footer-column contact-details">
+                    <h3>Our Contact Details</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> Plot 82, Medical Square, near Hanuman Nagar, Nagpur, Maharashtra, India - 500090.</p>
+                        <p><i class="fas fa-phone"></i> +91 8766304678, 404 4335815</p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@munchkinsgroup.com">info@munchkinsgroup.com</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; Munchkins <span id="current-year"></span>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        // Dynamically update the copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Hamburger menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.querySelector('.navbar');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const hamburger = document.querySelector('.hamburger');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            hamburger.classList.toggle('active'); // Toggle class for hamburger animation
+            
+            // Accessibility attribute update
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Close menu when a link is clicked (for single page navigation)
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navbar.classList.contains('active')) { // Only close if mobile menu is open
+                    navbar.classList.remove('active');
+                    hamburger.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Handle carousel slide event for text animation (optional but good for professionalism)
+        // const schoolCarousel = document.getElementById('schoolCarousel');
+        // schoolCarousel.addEventListener('slid.bs.carousel', function () {
+        //     // Re-trigger animation on current slide's content
+        //     const activeItem = this.querySelector('.carousel-item.active .hero-content');
+        //     if (activeItem) {
+        //         activeItem.style.animation = 'none'; // Reset animation
+        //         activeItem.offsetHeight; // Trigger reflow
+        //         activeItem.style.animation = null; // Re-apply animation
+        //     }
+        // });
+    </script>
+</body>
+</html>

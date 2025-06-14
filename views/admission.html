@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munchkin School - Admission</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css"> 
+    <link rel="stylesheet" href="/css/admission.css"> 
+    
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">
+            <img src="./images/sdsdsdfdffdf.png" alt="Munchkin School Logo">
+        </a>
+        
+        <nav class="navbar" id="main-navbar">
+            <ul class="nav-list">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+                <li><a href="/program" class="nav-link">Program</a></li>
+                <li><a href="/admission" class="nav-link active">Admission</a></li> <li><a href="/franchise" class="nav-link">Franchise</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-right">
+            <div class="social-icons">
+                <a href="#" class="icon-link" aria-label="YouTube"><i class="bx bxl-youtube"></i></a>
+                <a href="#" class="icon-link" aria-label="Mail"><i class="bx bxs-envelope"></i></a>
+                <a href="#" class="icon-link" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+            </div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navbar">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Munchkin Preschool!</h1>
+            <p class="hero-intro">Where every child’s journey of learning and discovery begins with joy.</p>
+            <button class="btn-enroll" onclick="scrollToForm()">Enroll Now</button>
+        </section>
+
+        <section id="programs" class="container py-5">
+            <h2 class="section-title">Our <span>Programs</span></h2>
+            <ul>
+                <li><strong>Exploring Toddlers (1-3 years):</strong> Encouraging social skills and language development through play.</li>
+                <li><strong>Learning Preschoolers (3-5 years):</strong> A curriculum focusing on early literacy, numeracy, and social skills.</li>
+                <li><strong>Summer Fun Camp:</strong> Engaging summer activities and projects to keep children learning and having fun.</li>
+            </ul>
+        </section>
+
+        <section id="admission-process" class="container py-5">
+            <h2 class="section-title">How to <span>Apply</span></h2>
+            <div class="content">
+                <ol>
+                    <li><strong>Fill Out the Inquiry Form:</strong> Let us know your interest in our programs.</li>
+                    <li><strong>Visit Our School:</strong> Schedule a tour to meet our team and see our facilities.</li>
+                    <li><strong>Complete the Application:</strong> Submit your child's application form online or in-person.</li>
+                    <li><strong>Meet with Us:</strong> Discuss your child's needs and our offerings in a one-on-one interview.</li>
+                    <li><strong>Confirm Enrollment:</strong> Complete the enrollment process and prepare for an exciting start!</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="schedule-tour" class="container py-5">
+            <h2 class="section-title">Schedule a <span>Visit</span></h2>
+            <p class="text-center">We'd love to show you around! <a href="#" onclick="scheduleTour()">Click here to schedule a tour</a> or call us at +91 8766304678.</p>
+        </section>
+
+        <section id="tuition-fees" class="bg-light py-5">
+            <div class="container">
+                <h2 class="section-title">Tuition & <span>Fees</span></h2>
+                <p class="text-center">We offer affordable tuition plans with flexible payment options. Contact us for detailed information.</p>
+            </div>
+        </section>
+
+        <section id="testimonials" class="container py-5">
+            <h2 class="section-title">What Parents <span>Say</span></h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <blockquote>
+                            <p class="mb-0">"Munchkin Preschool has been a fantastic experience for our family. The teachers are wonderful and my child loves it here!"</p>
+                            <footer>Sarah Lee, Parent</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <blockquote>
+                            <p class="mb-0">"The vibrant environment and caring staff make Munchkin a great place for early learning. Highly recommended!"</p>
+                            <footer>Michael Brown, Parent</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <blockquote>
+                            <p class="mb-0">"Our child has flourished at Munchkin Preschool. The personalized attention and creative activities are top-notch."</p>
+                            <footer>Emily Davis, Parent</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="admission-form" class="form-container">
+            <div class="form-box">
+                <h2>Admission Inquiry <span>Form</span></h2>
+                <form action="/admissionForm" method="get" id="admissionForm"> 
+                    <label for="name">Child's Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                    
+                    <label for="parentName">Parent's Name:</label>
+                    <input type="text" id="parentName" name="parentName" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="facilities" class="container py-5">
+            <h2 class="section-title">Our <span>Facilities</span></h2>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="./images/play-areas-in-hyderabad.jpg" class="card-img-top" alt="Interactive Play Areas">
+                        <div class="card-body">
+                            <h5 class="card-title">Interactive Play Areas</h5>
+                            <p class="card-text">Bright and engaging play areas designed to spark creativity and fun.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="./images/download (2).jpeg" class="card-img-top" alt="Safe and Secure Environment">
+                        <div class="card-body">
+                            <h5 class="card-title">Safe and Secure Environment</h5>
+                            <p class="card-text">Our facilities are designed with safety in mind, ensuring a secure environment for all children.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="./images/240_F_784219925_IWKMtP45ijB7gZHW6EYIa5kdBlZTHslG.jpg" class="card-img-top" alt="Nurturing Curriculum">
+                        <div class="card-body">
+                            <h5 class="card-title">Nurturing Curriculum</h5>
+                            <p class="card-text">Our curriculum supports early development through playful learning and exploration.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="./images/image-12-2.jpg" class="card-img-top" alt="Family Involvement">
+                        <div class="card-body">
+                            <h5 class="card-title">Family Involvement</h5>
+                            <p class="card-text">We encourage active family participation to enhance the learning experience.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-main">
+            <div class="footer-row">
+                <div class="footer-column about-us">
+                    <h3>About Us</h3>
+                    <p>Munchkins, a creative campus for children where the learning process blends with excitement and an enabling environment. Munchkins provides childcare of the highest quality.</p>
+                    <div class="social-icons-footer">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Pages</h3>
+                    <ul class="footer-links">
+                        <li><a href="/about">About School</a></li>
+                        <li><a href="/program">Program</a></li>
+                        <li><a href="/franchise">Franchise</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms-conditions">Terms & Conditions</a></li>
+                        <li><a href="/refund-policy">Refund Policy</a></li>
+                    </ul>
+                </div>
+            
+                <div class="footer-column contact-details">
+                    <h3>Our Contact Details</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> Plot 82, Medical Square, near Hanuman Nagar, Nagpur, Maharashtra, India - 500090.</p>
+                        <p><i class="fas fa-phone"></i> +91 8766304678, 404 4335815</p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@munchkinsgroup.com">info@munchkinsgroup.com</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; Munchkins <span id="current-year"></span>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        // Dynamically update the copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Hamburger menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.querySelector('.navbar');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const hamburger = document.querySelector('.hamburger');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            hamburger.classList.toggle('active'); // Toggle class for hamburger animation
+            
+            // Accessibility attribute update
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Close menu when a link is clicked (for single page navigation)
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navbar.classList.contains('active')) { // Only close if mobile menu is open
+                    navbar.classList.remove('active');
+                    hamburger.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        function scheduleTour() {
+            alert("Thank you for your interest! Please fill out the Admission Inquiry Form below, and we will contact you to schedule a tour.");
+            document.querySelector('#admission-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToForm() {
+            document.querySelector('#admission-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // --- Intersection Observer for Scroll Animations ---
+        document.addEventListener('DOMContentLoaded', function() {
+            // Observer for section titles
+            const sectionTitleObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('loaded');
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, {
+                threshold: 0.5 // Trigger when 50% of the heading is visible
+            });
+
+            document.querySelectorAll('.section-title').forEach(title => {
+                title.classList.add('hidden-section-title'); // Add initial hidden state for animation
+                sectionTitleObserver.observe(title);
+            });
+
+            // Observer for list items in Programs and Admission Process
+            const listItemObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const items = entry.target.querySelectorAll('li');
+                        items.forEach((item, index) => {
+                            item.classList.add('hidden-list-item'); // Add initial hidden state for animation
+                            setTimeout(() => {
+                                item.classList.add('loaded');
+                            }, index * 100); // Stagger each list item's animation
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            document.querySelectorAll('#programs ul, #admission-process ol').forEach(list => {
+                listItemObserver.observe(list);
+            });
+
+            // Observer for testimonials
+            const testimonialObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const testimonials = entry.target.querySelectorAll('.testimonial');
+                        testimonials.forEach((testimonial, index) => {
+                            testimonial.classList.add('hidden-testimonial'); // Add initial hidden state for animation
+                            setTimeout(() => {
+                                testimonial.classList.add('loaded');
+                            }, index * 150); // Stagger each testimonial
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            document.querySelectorAll('#testimonials .row').forEach(row => {
+                testimonialObserver.observe(row);
+            });
+
+
+            // Observer for the admission form box
+            const formBoxObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('loaded');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.3 // Trigger when 30% of the form is visible
+            });
+
+            document.querySelectorAll('.form-box').forEach(form => {
+                form.classList.add('hidden-form-box'); // Add initial hidden state for animation
+                formBoxObserver.observe(form);
+            });
+
+            // Observer for facilities cards
+            const facilitiesCardObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const cards = entry.target.querySelectorAll('.card');
+                        cards.forEach((card, index) => {
+                            card.classList.add('hidden-card'); // Add initial hidden state for animation
+                            setTimeout(() => {
+                                card.classList.add('loaded');
+                            }, index * 120); // Stagger each card's animation
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2 // Trigger when 20% of the container is visible
+            });
+
+            document.querySelectorAll('#facilities .row').forEach(row => {
+                facilitiesCardObserver.observe(row);
+            });
+        });
+    </script>
+</body>
+</html>

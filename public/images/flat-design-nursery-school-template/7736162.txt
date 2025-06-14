@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kidzee Preschool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>KIDZEE</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Programmes</a></li>
+                <li><a href="#">Péntemind</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Franchise Opportunity</a></li>
+                <li><a href="#">Locate Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-section">
+        <div class="about-content">
+            <div class="image-container">
+                <img src="kid-image.jpg" alt="Kidzee Preschool">
+            </div>
+            <div class="text-content">
+                <h2>About Us</h2>
+                <h3>Kidzee Preschool</h3>
+                <p>Kidzee Preschool is a leading chain of preschools located in India and Nepal backed by Zee Learn Ltd. With more than two decades of experience in the preschool industry, Kidzee has nurtured more than 1.5 million children throughout India. Being one of the largest preschools in India. Kidzee has 2000+ centres in 750+ cities in India and Nepal.</p>
+                <h3>Kidzee Advantage</h3>
+                <p>Kidzee is a leader and a trendsetter in <strong>Early Childhood Care and Education (ECCE)</strong>. Our business partners' passion and drive are vital for our brand’s success.</p>
+                <p>Our Business Partners don't just take the name, they also take our pedagogy- <strong>PÉNTEMiND</strong>, guidelines to teach, prescribes books/plays to be followed and so on to the ground.</p>
+                <p>Starting a preschool requires a strategic researching, planning, designing, and organizing. <strong>Kidzee Professional research</strong>, makes this journey easier and rewarding for all our Business Partners.</p>
+                <p><strong>Secret to Success is Service and Support.</strong> We provide pre-opening and operational support apart from the regular support that is given additional to all systems and processes.</p>
+            </div>
+        </div>
+        <div class="cta-buttons">
+            <button>Admission Enquiry</button>
+            <button>Start a Franchise</button>
+        </div>
+    </section>
+</body>
+</html>
+
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0e6f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and navigation */
+.header {
+    background-color: #6e3197;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* About section */
+.about-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e6d8f0;
+    border-radius: 10px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.text-content {
+    flex: 2;
+}
+
+.text-content h2 {
+    color: #6e3197;
+    margin-bottom: 10px;
+}
+
+.text-content h3 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.text-content p {
+    margin-bottom: 15px;
+}
+
+.text-content strong {
+    color: #6e3197;
+}
+
+/* CTA buttons */
+.cta-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cta-buttons button {
+    background-color: #6e3197;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.cta-buttons button:hover {
+    background-color: #4a1e6c;
+}
