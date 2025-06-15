@@ -299,6 +299,7 @@
             border-color: #34495e;
             transform: translateY(-2px);
         }
+        
 
         /* Additional Information Section */
         .main section.mt-5 p { /* Specificity for this paragraph */

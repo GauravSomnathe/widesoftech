@@ -120,9 +120,9 @@
         <section id="admission-form" class="form-container">
             <div class="form-box">
                 <h2>Admission Inquiry <span>Form</span></h2>
-                <form action="/admissionForm" method="get" id="admissionForm"> 
-                    <label for="name">Child's Name:</label>
-                    <input type="text" id="name" name="name" required>
+                <form action="/admissionForm" method="post" id="admissionForm"> 
+                    <label for="childName">Child's Name:</label>
+                    <input type="text" id="childName" name="childName" required>
                     
                     <label for="dob">Date of Birth:</label>
                     <input type="date" id="dob" name="dob" required>
@@ -133,8 +133,8 @@
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                     
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <label for="phone_no">Phone Number:</label>
+                    <input type="tel" id="phone_no" name="phone_no" required>
                     
                     <label for="address">Address:</label>
                     <textarea id="address" name="address" rows="4" required></textarea>
@@ -241,147 +241,135 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
     <script>
-        // Dynamically update the copyright year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        // --- Global Selectors ---
+        const currentYearSpan = document.getElementById('current-year');
         const menuToggle = document.getElementById('menu-toggle');
         const navbar = document.querySelector('.navbar');
-        const navLinks = document.querySelectorAll('.nav-link');
         const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-        menuToggle.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-            hamburger.classList.toggle('active'); // Toggle class for hamburger animation
-            
-            // Accessibility attribute update
-            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-            menuToggle.setAttribute('aria-expanded', !isExpanded);
-        });
+        // --- Update Copyright Year ---
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
 
-        // Close menu when a link is clicked (for single page navigation)
+        // --- Hamburger Menu Toggle Functionality ---
+        if (menuToggle && navbar && hamburger) {
+            menuToggle.addEventListener('click', () => {
+                navbar.classList.toggle('active');
+                hamburger.classList.toggle('active');
+
+                // Toggle ARIA expanded state for accessibility
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', String(!isExpanded)); // Convert boolean to string
+            });
+        }
+
+        // --- Close Mobile Menu When Nav Link is Clicked ---
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                if (navbar.classList.contains('active')) { // Only close if mobile menu is open
+                // Only close if mobile menu is currently open
+                if (navbar && navbar.classList.contains('active')) {
                     navbar.classList.remove('active');
-                    hamburger.classList.remove('active');
-                    menuToggle.setAttribute('aria-expanded', 'false');
+                    if (hamburger) {
+                        hamburger.classList.remove('active');
+                    }
+                    if (menuToggle) {
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
                 }
             });
         });
 
-        function scheduleTour() {
+        // --- Utility Functions for Scrolling/Alerts (if used on this page) ---
+        // Ensure these functions are globally accessible if they are called from HTML attributes (e.g., onclick)
+        // Otherwise, they could be nested within the DOMContentLoaded listener.
+        window.scheduleTour = function() {
             alert("Thank you for your interest! Please fill out the Admission Inquiry Form below, and we will contact you to schedule a tour.");
-            document.querySelector('#admission-form').scrollIntoView({ behavior: 'smooth' });
-        }
+            const admissionForm = document.querySelector('#admission-form');
+            if (admissionForm) {
+                admissionForm.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
 
-        function scrollToForm() {
-            document.querySelector('#admission-form').scrollIntoView({ behavior: 'smooth' });
-        }
+        window.scrollToForm = function() {
+            const admissionForm = document.querySelector('#admission-form');
+            if (admissionForm) {
+                admissionForm.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
 
         // --- Intersection Observer for Scroll Animations ---
-        document.addEventListener('DOMContentLoaded', function() {
-            // Observer for section titles
-            const sectionTitleObserver = new IntersectionObserver((entries, observer) => {
+
+        // Helper function to create an observer for elements with a stagger effect
+        function createStaggerObserver(selector, hiddenClass, loadedClass, staggerDelay, threshold) {
+            const observer = new IntersectionObserver((entries, obs) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('loaded');
-                        observer.unobserve(entry.target); // Stop observing once animated
-                    }
-                });
-            }, {
-                threshold: 0.5 // Trigger when 50% of the heading is visible
-            });
-
-            document.querySelectorAll('.section-title').forEach(title => {
-                title.classList.add('hidden-section-title'); // Add initial hidden state for animation
-                sectionTitleObserver.observe(title);
-            });
-
-            // Observer for list items in Programs and Admission Process
-            const listItemObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const items = entry.target.querySelectorAll('li');
+                        const items = entry.target.querySelectorAll(selector);
                         items.forEach((item, index) => {
-                            item.classList.add('hidden-list-item'); // Add initial hidden state for animation
+                            item.classList.add(hiddenClass); // Initial hidden state
                             setTimeout(() => {
-                                item.classList.add('loaded');
-                            }, index * 100); // Stagger each list item's animation
+                                item.classList.add(loadedClass);
+                            }, index * staggerDelay);
                         });
-                        observer.unobserve(entry.target);
+                        obs.unobserve(entry.target); // Stop observing once animated
                     }
                 });
-            }, {
-                threshold: 0.2
-            });
+            }, { threshold: threshold });
 
-            document.querySelectorAll('#programs ul, #admission-process ol').forEach(list => {
-                listItemObserver.observe(list);
-            });
+            return observer;
+        }
 
-            // Observer for testimonials
-            const testimonialObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const testimonials = entry.target.querySelectorAll('.testimonial');
-                        testimonials.forEach((testimonial, index) => {
-                            testimonial.classList.add('hidden-testimonial'); // Add initial hidden state for animation
-                            setTimeout(() => {
-                                testimonial.classList.add('loaded');
-                            }, index * 150); // Stagger each testimonial
-                        });
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.2
+        // Observer for section titles (no stagger)
+        const sectionTitleObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('loaded');
+                    observer.unobserve(entry.target);
+                }
             });
+        }, { threshold: 0.5 });
 
-            document.querySelectorAll('#testimonials .row').forEach(row => {
-                testimonialObserver.observe(row);
-            });
-
-
-            // Observer for the admission form box
-            const formBoxObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('loaded');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.3 // Trigger when 30% of the form is visible
-            });
-
-            document.querySelectorAll('.form-box').forEach(form => {
-                form.classList.add('hidden-form-box'); // Add initial hidden state for animation
-                formBoxObserver.observe(form);
-            });
-
-            // Observer for facilities cards
-            const facilitiesCardObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const cards = entry.target.querySelectorAll('.card');
-                        cards.forEach((card, index) => {
-                            card.classList.add('hidden-card'); // Add initial hidden state for animation
-                            setTimeout(() => {
-                                card.classList.add('loaded');
-                            }, index * 120); // Stagger each card's animation
-                        });
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.2 // Trigger when 20% of the container is visible
-            });
-
-            document.querySelectorAll('#facilities .row').forEach(row => {
-                facilitiesCardObserver.observe(row);
-            });
+        document.querySelectorAll('.section-title').forEach(title => {
+            title.classList.add('hidden-section-title');
+            sectionTitleObserver.observe(title);
         });
-    </script>
+
+        // Observer for list items in Programs and Admission Process
+        const listItemObserver = createStaggerObserver('li', 'hidden-list-item', 'loaded', 100, 0.2);
+        document.querySelectorAll('#programs ul, #admission-process ol').forEach(list => {
+            listItemObserver.observe(list);
+        });
+
+        // Observer for testimonials
+        const testimonialObserver = createStaggerObserver('.testimonial', 'hidden-testimonial', 'loaded', 150, 0.2);
+        document.querySelectorAll('#testimonials .row').forEach(row => {
+            testimonialObserver.observe(row);
+        });
+
+        // Observer for the admission form box
+        const formBoxObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('loaded');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.form-box').forEach(form => {
+            form.classList.add('hidden-form-box');
+            formBoxObserver.observe(form);
+        });
+
+        // Observer for facilities cards
+        const facilitiesCardObserver = createStaggerObserver('.card', 'hidden-card', 'loaded', 120, 0.2);
+        document.querySelectorAll('#facilities .row').forEach(row => {
+            facilitiesCardObserver.observe(row);
+        });
+    });
+</script>
 </body>
 </html>
